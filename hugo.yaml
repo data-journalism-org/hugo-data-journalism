@@ -1,7 +1,7 @@
 baseurl: /
 languageCode: ja-jp
 theme: hugo-theme-stack
-title: hugo-explorable
+title: Explorable Explanations
 copyright: Example Person
 
 ignoreFiles:
@@ -12,6 +12,7 @@ ignoreFiles:
     - "/.git/"
     - "/.claude/"
     - "/paper/"
+    - "/reference_repo/"
     - "\\.rst$"
 
 # Theme i18n support
@@ -25,18 +26,18 @@ hasCJKLanguage: true
 languages:
     ja:
         languageName: 日本語
-        title: hugo-explorable
+        title: Explorable Explanations
         weight: 1
         params:
             sidebar:
-                subtitle: hugo-explorable へようこそ
+                subtitle: インタラクティブな記事で学ぶAIとデータ可視化
     en:
         languageName: English
-        title: hugo-explorable
+        title: Explorable Explanations
         weight: 2
         params:
             sidebar:
-                subtitle: Welcome to hugo-explorable
+                subtitle: The only authentic data visualization course in Japan.
 
 services:
     # Change it to your Disqus shortname before using
@@ -69,8 +70,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: 📊
+        subtitle: 
         avatar:
             enabled: true
             local: true
@@ -170,16 +171,9 @@ params:
             id:
     widgets:
         homepage:
-            - type: search
             - type: archives
-              params:
-                  limit: 5
             - type: categories
-              params:
-                  limit: 10
             - type: tag-cloud
-              params:
-                  limit: 10
         page:
             - type: toc
 
@@ -214,7 +208,21 @@ params:
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main:
+        - name: ホーム
+          pageRef: /
+          weight: 1
+        - name: AIモデル
+          pageRef: /categories/ai-model
+          weight: 10
+        - name: ライブラリ
+          pageRef: /categories/library
+          weight: 20
+        - name: コンテンツ
+          pageRef: /categories/contents
+          weight: 30
+
+
 
     social:
         - identifier: github
