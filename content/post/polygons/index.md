@@ -3,7 +3,7 @@ title: polygons
 description: 
 slug: "polygons"
 weight: 1
-categories: "free-tools"
+categories: "contents"
 address: 
 image: "images/cover.png"
 ---

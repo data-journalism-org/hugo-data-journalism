@@ -3,7 +3,7 @@ title: cnn-explainer
 description: 
 slug: "cnn-explainer"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

@@ -3,7 +3,7 @@ title: altair
 description: 
 slug: "altair"
 weight: 1
-categories: "free-tools"
+categories: "library"
 address: 
 image: "images/cover.png"
 ---

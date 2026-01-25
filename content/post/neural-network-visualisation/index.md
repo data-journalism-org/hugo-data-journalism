@@ -3,7 +3,7 @@ title: neural-network-visualisation
 description: 
 slug: "neural-network-visualisation"
 weight: 1
-categories: "free-tools"
+categories: "contents"
 address: 
 image: "images/cover.png"
 ---

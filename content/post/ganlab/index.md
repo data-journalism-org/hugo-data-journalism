@@ -3,7 +3,7 @@ title: ganlab
 description: 
 slug: "ganlab"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

@@ -3,7 +3,7 @@ title: transformer-explainer
 description: 
 slug: "transformer-explainer"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

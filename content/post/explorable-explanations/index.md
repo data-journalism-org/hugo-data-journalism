@@ -3,7 +3,7 @@ title: explorable-explanations
 description: 
 slug: "explorable-explanations"
 weight: 1
-categories: "free-tools"
+categories: "contents"
 address: 
 image: "images/cover.png"
 ---

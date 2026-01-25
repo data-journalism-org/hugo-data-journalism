@@ -3,7 +3,7 @@ title: diffusion-explainer
 description: 
 slug: "diffusion-explainer"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

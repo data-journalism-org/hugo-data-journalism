@@ -3,7 +3,7 @@ title: aws-mlu-explain
 description: 
 slug: "aws-mlu-explain"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

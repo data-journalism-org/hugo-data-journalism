@@ -3,7 +3,7 @@ title: playground
 description: 
 slug: "playground"
 weight: 1
-categories: "free-tools"
+categories: "ai-model"
 address: 
 image: "images/cover.png"
 ---

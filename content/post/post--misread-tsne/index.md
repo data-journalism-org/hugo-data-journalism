@@ -3,7 +3,7 @@ title: post--misread-tsne
 description: 
 slug: "post--misread-tsne"
 weight: 1
-categories: "free-tools"
+categories: "contents"
 address: 
 image: "images/cover.png"
 ---

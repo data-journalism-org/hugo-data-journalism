@@ -3,7 +3,7 @@ title: ai-explorables
 description: 
 slug: "ai-explorables"
 weight: 1
-categories: "free-tools"
+categories: "contents"
 address: 
 image: "images/cover.png"
 ---
