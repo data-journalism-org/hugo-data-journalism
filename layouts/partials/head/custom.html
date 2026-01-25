@@ -1,2 +1,6 @@
-{{ $style := resources.Get "scss/custom.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<!-- Custom Head -->
+<!-- 
+    The reference repository (hugo-dvl) uses this file for Google Analytics.
+    We removed the manual SCSS loading that was causing build errors.
+    Custom CSS is automatically loaded by the theme via assets/scss/custom.scss.
+-->

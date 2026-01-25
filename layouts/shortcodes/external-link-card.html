@@ -1,7 +1,4 @@
-{{- $url := .Get "url" | default (.Get 0) -}}
-{{- if not $url -}}
-  {{- errorf "external-link-card shortcode requires a url parameter" -}}
-{{- end -}}
+{{- $url := .Get "url" | default (.Get 0) | default "https://explorable-explanations.com" -}}
 
 {{- $title := .Get "title" | default (.Get 1) | default $url -}}
 {{- $image := .Get "image" -}}
@@ -11,47 +8,51 @@
 {{- $parsed := urls.Parse $url -}}
 {{- $host := "" -}}
 {{- if $parsed -}}
-  {{- $host = $parsed.Host -}}
+{{- $host = $parsed.Host -}}
 {{- end -}}
 {{- $displaySite := $site | default $host -}}
 {{- $rawDescription := "" -}}
 {{- with .Get "description" -}}
-  {{- $rawDescription = . | markdownify -}}
+{{- $rawDescription = . | markdownify -}}
 {{- else -}}
-  {{- with .Inner -}}
-    {{- $rawDescription = . | markdownify -}}
-  {{- end -}}
+{{- with .Inner -}}
+{{- $rawDescription = . | markdownify -}}
+{{- end -}}
 {{- end -}}
 <div class="external-link-card">
   <a class="external-link-card__inner" href="{{ $url | safeURL }}" target="{{ $target }}" rel="{{ $rel }}">
     <div class="external-link-card__media{{ if not $image }} external-link-card__media--placeholder{{ end }}">
       {{- with $image -}}
-        <img src="{{ . | safeURL }}" alt="{{ $title }}" loading="lazy" decoding="async" />
+      <img src="{{ . | safeURL }}" alt="{{ $title }}" loading="lazy" decoding="async" />
       {{- else -}}
-        <span class="external-link-card__media-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false">
-            <path d="M14 3h7v7m0-7L13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M17 17H5V5h7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
+      <span class="external-link-card__media-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false">
+          <path d="M14 3h7v7m0-7L13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M17 17H5V5h7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </span>
       {{- end -}}
     </div>
     <div class="external-link-card__body">
       {{- with $displaySite -}}
-        <div class="external-link-card__site">{{ . }}</div>
+      <div class="external-link-card__site">{{ . }}</div>
       {{- end -}}
       <div class="external-link-card__title">{{ $title }}</div>
       {{- with $rawDescription -}}
-        <div class="external-link-card__description">{{ . }}</div>
+      <div class="external-link-card__description">{{ . }}</div>
       {{- end -}}
       {{- with $host -}}
-        <div class="external-link-card__url">{{ . }}</div>
+      <div class="external-link-card__url">{{ . }}</div>
       {{- end -}}
     </div>
     <span class="external-link-card__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" focusable="false">
-        <path d="M14 3h7v7m0-7L13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M17 17H5V5h7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 3h7v7m0-7L13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M17 17H5V5h7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+          stroke-linejoin="round" />
       </svg>
     </span>
   </a>

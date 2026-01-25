@@ -1,0 +1,173 @@
+{{ define "main" }}
+<style>
+    .lp-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 2rem 0;
+        color: var(--card-text-color-main);
+    }
+
+    /* Hero Section */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 2rem;
+        min-height: 400px;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .hero-content {
+            /* Adjust order if necessary, but grid structure handles it naturally */
+        }
+
+        .hero-image {
+            order: -1;
+            /* Ensure image is on top on mobile */
+        }
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        color: #10B981;
+        /* Stack Green */
+    }
+
+    .hero-subtitle {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        line-height: 1.3;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+        .hero-buttons {
+            justify-content: center;
+        }
+    }
+
+
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    /* Features Section */
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .features {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .feature-card {
+        background: var(--card-background);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow-l1);
+        transition: transform 0.2s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        padding: 0.5rem;
+        background: rgba(16, 185, 129, 0.1);
+        border-radius: 8px;
+        color: #10B981;
+    }
+
+    .feature-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .feature-desc {
+        line-height: 1.6;
+        color: var(--body-text-color);
+    }
+</style>
+
+<div class="lp-container">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explorable Explanations</h1>
+            <p class="hero-subtitle">インタラクティブな記事で学ぶ<br>AIとデータ可視化の世界</p>
+            <div class="hero-buttons">
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for the illustration -->
+            <img src="/images/cover-top.png" alt="Hero Image" style="width: 100%; height: auto; border-radius: 20px;">
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <a href="/categories/ai-model" class="feature-card" style="text-decoration: none; color: inherit;">
+            <div class="feature-icon">🤖</div>
+            <h3 class="feature-title">AIモデル</h3>
+            <p class="feature-desc">最新のAIモデルの仕組みや特徴について、インタラクティブに学べる解説記事です。</p>
+        </a>
+
+        <a href="/categories/library" class="feature-card" style="text-decoration: none; color: inherit;">
+            <div class="feature-icon">📚</div>
+            <h3 class="feature-title">ライブラリ</h3>
+            <p class="feature-desc">データ可視化や機械学習に役立つライブラリの使い方や実践例を紹介します。</p>
+        </a>
+
+        <a href="/categories/contents" class="feature-card" style="text-decoration: none; color: inherit;">
+            <div class="feature-icon">📝</div>
+            <h3 class="feature-title">コンテンツ</h3>
+            <p class="feature-desc">その他、データサイエンスやプログラミングに関する様々なコンテンツを提供しています。</p>
+        </a>
+    </section>
+
+
+</div>
+{{ end }}
+
+{{ define "right-sidebar" }}
+<!-- No sidebar on homepage -->
+{{ end }}
