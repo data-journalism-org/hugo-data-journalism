@@ -1,5 +1,5 @@
 ---
-title: dataviz.jp
+title: 事例
 linktitle: ホーム
 description: ログイン不要・日本語で利用できる無料データ可視化ツール集
 lastmod: 2023-08-31

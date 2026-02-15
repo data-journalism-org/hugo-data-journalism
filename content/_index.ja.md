@@ -1,5 +1,5 @@
 ---
-title: "Explorable Explanations"
+title: "Data Journalism.JP"
 hero:
     headline: "Explorable Explanations"
     body:
