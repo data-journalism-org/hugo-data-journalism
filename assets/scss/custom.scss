@@ -216,11 +216,12 @@
   overflow: hidden;
   background-color: var(--card-background);
   box-shadow: var(--shadow-l1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-l2);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-l3);
+    background-color: var(--card-background-selected);
   }
 }
 

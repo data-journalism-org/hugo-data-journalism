@@ -2,11 +2,11 @@ enableRobotsTXT: true
 minify:
     disableXML: true
     minifyOutput: true
-baseurl: https://explorable-explanations.com/
+baseurl: https://data-journalism.org/
 languageCode: ja-jp
 theme: hugo-theme-stack
-title: Explorable Explanations
-copyright: Example Person
+title: Data Journalism.JP
+copyright: Yuichi Yazaki
 
 ignoreFiles:
     - "/node_modules/"
@@ -30,18 +30,18 @@ hasCJKLanguage: true
 languages:
     ja:
         languageName: 日本語
-        title: Explorable Explanations
+        title: Data Journalism.JP
         weight: 1
         params:
             sidebar:
-                subtitle: インタラクティブな記事で学ぶAIとデータ可視化
+                subtitle: data journalism
     en:
         languageName: English
-        title: Explorable Explanations
+        title: Data Journalism.JP
         weight: 2
         params:
             sidebar:
-                subtitle: The only authentic data visualization course in Japan.
+                subtitle: data journalism
 
 services:
     # Change it to your Disqus shortname before using
@@ -55,7 +55,7 @@ pagination:
     pagerSize: 20
 
 permalinks:
-    post: /p/:slug/
+    post: /:slug/
     page: /:slug/
 
 params:
@@ -221,21 +221,16 @@ menu:
           weight: -60
           params:
               icon: home
-        - name: AIモデル
-          pageRef: /categories/ai-model
+        - name: 事例
+          pageRef: /categories/case
           weight: 10
           params:
-              icon: infinity
-        - name: ライブラリ
-          pageRef: /categories/library
+              icon: archives
+        - name: 原理原則
+          pageRef: /categories/fundamental
           weight: 20
           params:
               icon: archives
-        - name: コンテンツ
-          pageRef: /categories/contents
-          weight: 30
-          params:
-              icon: categories
 
 
 related:
